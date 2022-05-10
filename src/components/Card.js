@@ -6,7 +6,7 @@ const Card = () => {
         return ( 
             Products.map((p)=>{
                 return(
-                    <div className="product">
+                    <div className="product" key={p.id}>
                         <div className="product-img">
                             <img src={p.image} />
                         </div>
