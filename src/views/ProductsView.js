@@ -1,9 +1,9 @@
-import Card from '../components/Card';
+import CardList from '../components/CardList';
 
 const ProductsView = () => {
     return ( 
         <div className="productsView">
-            <Card />
+            <CardList />
         </div>
     )
 }

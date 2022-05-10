@@ -1,23 +1,18 @@
 import Counters from './Counters.js';
-const Products = require('./products.json');
 
-const Card = () => {
 
+const Card = ({id,title,image,price}) => {
         return ( 
-            Products.map((p)=>{
-                return(
-                    <div className="product" key={p.id}>
-                        <div className="product-img">
-                            <img src={p.image} />
-                        </div>
-                        <h5>{p.title}</h5>
-                        <div className="price">
-                            <p>U$D {p.price}</p>
-                            <Counters />
-                        </div>
-                    </div>
-                )
-            })
+            <div className="product" key={id}>
+                <div className="product-img">
+                    <img src={image} />
+                </div>
+                <h5>{title}</h5>
+                <div className="price">
+                    <p>U$D {price}</p>
+                    <Counters />
+                </div>
+            </div>
     )
 }
 
