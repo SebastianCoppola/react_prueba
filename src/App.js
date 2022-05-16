@@ -1,18 +1,14 @@
-import './App.css';
-import NavBar from './components/Navbar';
-import ProductsView from './views/ProductsView';
-import MasInfo from './components/MasInfo';
-
-
+import "./App.css";
+import NavBar from "./components/Navbar";
+import ProductsView from "./views/ProductsView";
 
 function App() {
   return (
     <>
       <NavBar />
       <ProductsView />
-      <MasInfo />
     </>
-  )
+  );
 }
 
 export default App;

@@ -1,36 +1,40 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from "react";
 
 const SearchBar = () => {
+  const focusInputRef = useRef();
 
-    const focusInputRef = useRef();
+  useEffect(() => {
+    focusInputRef.current.focus();
+  }, []);
 
-    useEffect(()=>{
-        focusInputRef.current.focus();
-    },[])
+  // const handleClick = () => {
+  //     console.log("Buscaste '" + focusInputRef.current.value + "'.");
+  // }
 
-    // const handleClick = () => {
-    //     console.log("Buscaste '" + focusInputRef.current.value + "'.");
-    // }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Buscaste '" + focusInputRef.current.value + "'.");
+    focusInputRef.current.value = "";
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Buscaste '" + focusInputRef.current.value + "'.");
-        focusInputRef.current.value = "";
-    }
-
-    return (
+  return (
     <div className="search-bar">
-        <form className="form" onSubmit={handleSubmit}>
-            <input
-                type="search"
-                id="search"
-                placeholder="buscar"
-                ref={focusInputRef}
-            />
-            <button /*onClick={handleClick}*/>🔍</button>
-        </form>
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="search"
+          className="search"
+          id="search"
+          placeholder="Remeras, Camperas, Accesorios, Tecnología"
+          ref={focusInputRef}
+        />
+        <input
+          type="button"
+          className="btn-search"
+          value="🔎" /*onClick={handleClick}*/
+        />
+      </form>
     </div>
-    )
-}
+  );
+};
 
 export default SearchBar;
