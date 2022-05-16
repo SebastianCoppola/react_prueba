@@ -1,6 +1,8 @@
 import './App.css';
 import NavBar from './components/Navbar';
 import ProductsView from './views/ProductsView';
+import MasInfo from './components/MasInfo';
+
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <>
       <NavBar />
       <ProductsView />
+      <MasInfo />
     </>
   )
 }
