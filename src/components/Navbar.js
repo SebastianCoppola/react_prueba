@@ -1,15 +1,12 @@
-import SearchBar from "./SearchBar";
-import NavLinks from "./NavLinks";
-
+import UserLogin from "./UserLogin";
 
 const NavBar = () => {
-    return ( 
-        <div className="navbar">
-            <h1>Tienda AYI</h1>
-            <SearchBar />
-            <NavLinks />
-        </div>
-    )
-}
+  return (
+    <div className="navbar">
+      <h1>Tienda AYI</h1>
+      <UserLogin />
+    </div>
+  );
+};
 
 export default NavBar;
