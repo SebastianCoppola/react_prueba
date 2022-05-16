@@ -7,10 +7,6 @@ const SearchBar = () => {
     focusInputRef.current.focus();
   }, []);
 
-  // const handleClick = () => {
-  //     console.log("Buscaste '" + focusInputRef.current.value + "'.");
-  // }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Buscaste '" + focusInputRef.current.value + "'.");
@@ -27,11 +23,7 @@ const SearchBar = () => {
           placeholder="Remeras, Camperas, Accesorios, Tecnología"
           ref={focusInputRef}
         />
-        <input
-          type="button"
-          className="btn-search"
-          value="🔎" /*onClick={handleClick}*/
-        />
+        <input type="submit" className="btn-search" value="🔎" />
       </form>
     </div>
   );
