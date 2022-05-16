@@ -7,25 +7,29 @@ body {
   background-color: #7393d3;
   height: 120px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 }
 .navbar h1{
   color: #cfd2d8;
+  width: 50%;
+  text-align: center;
 }
 .search-bar{
+  width: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .form input{
   height: 30px;
   width: 200px;
   border:none;
   margin-right: 10px;
-
 }
+
 .productsView{
   background-color: #7393d3;
   margin: auto;
